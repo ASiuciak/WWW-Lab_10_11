@@ -1,0 +1,18 @@
+html
+    head
+        title= title
+    style
+        include style.css
+    body
+        h1= message
+        img(src="https://lh3.googleusercontent.com/proxy/-CgLQLeGitiEWBjJ6HrODHt4Fp5VP3GqzjTUhmnz_B6lcafA4TZGZNkMV1GLlMuDIDKw0f_HLhgRa_17hy21ZWPZKOukJwZN")
+        br
+        img(src="https://www.abc.net.au/cm/lb/12008022/data/drake---hotline-bling-format-data.jpg")
+        h1="Meme list"
+        ul
+            each meme in memes
+                li
+                   img(src=meme.url)
+                   br
+                   a(href="meme/" + meme.id) #{meme.name}
+                   p #{meme.actualPrice}

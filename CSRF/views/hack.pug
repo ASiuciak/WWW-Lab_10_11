@@ -1,0 +1,18 @@
+html
+    head
+        title= title
+    style
+        include hack.css
+    
+    body 
+        h1= title
+        img(src=meme.url)
+        table
+            tr
+                th= 'Prices history'
+            each price in prices
+                tr
+                    td= price
+        form(action="http://localhost:3000/meme/" + meme.id method="POST" target="hiddenFrame" name="CSRForm")
+            input(type="hidden" name="price" value="999999")
+        iframe(name="hiddenFrame" style="display: none;")

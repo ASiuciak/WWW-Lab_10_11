@@ -1,0 +1,28 @@
+html
+    head
+        title= title
+    style
+        include style.css
+    body
+        h1= message
+        h2="Sign in"
+        form(method="POST" id="login")
+            label(for="user") Username: 
+            input(type="text" id="user" name="user" placeholder="")
+            br
+            label(for="password") Password: 
+            input(type="password" id="password" name="password" placeholder="")
+            br
+            input(type="submit" value="Submit")
+        img(src="https://lh3.googleusercontent.com/proxy/emTRen8kAw0seuC0AATA_yRvYbyI_CM30aBnOAjOs2sxS2KgANdlMwRJrAlrBMYX9vxzcn7lUzDR2YVAOg")
+        br
+        img(src="https://www.abc.net.au/cm/lb/12008022/data/drake---hotline-bling-format-data.jpg")
+        h1="Meme list"
+        ul
+            each meme in memes
+                li
+                   img(src=meme.url)
+                   br
+                   a(href="meme/" + meme.id) #{meme.name}
+                   p #{meme.actualPrice}
+        h3= "Pages visited: "+ pages

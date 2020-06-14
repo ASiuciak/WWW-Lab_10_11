@@ -1,0 +1,27 @@
+img {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+}
+
+body {
+    background-color: aquamarine;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+}
+
+form {
+    position: relative;
+    left: 700px;
+}
+
+h2 {
+    position: relative;
+    left: 700px;
+}

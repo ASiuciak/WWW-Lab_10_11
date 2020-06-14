@@ -1,0 +1,17 @@
+html
+    style
+        include history.css
+    body
+        h1= text
+        table
+            tr
+                th= 'Old'
+                th= 'New'
+                th= 'User'
+            each record in list
+                tr
+                    td= record.oldPrice
+                    td= record.newPrice
+                    td= record.user
+        a(href="../../..") Back to main page
+        h2= "Pages visited: "+ pages

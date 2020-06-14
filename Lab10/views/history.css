@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+img {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 20%;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    text-align: center;
+    height: 50px;
+    font-size: 30px;
+}

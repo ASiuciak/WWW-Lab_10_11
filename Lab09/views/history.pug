@@ -1,0 +1,18 @@
+html
+    head
+        title= title
+    style
+        include history.css
+    body
+        h1= title
+        img(src=meme.url)
+        table
+            tr
+                th= 'Prices history'
+            each price in prices
+                tr
+                    td= price
+        h1= "Change price"
+        form(action="/meme/" + meme.id method="POST")
+            input(type="text" name="price" placeholder="")
+            input(type="submit")
